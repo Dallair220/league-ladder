@@ -1,0 +1,28 @@
+{
+  "name": "league-ladder",
+  "version": "1.0.0",
+  "description": "Riot API testing + fun project for friends group (RCD discord)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dallair220/league-ladder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dallair220/league-ladder/issues"
+  },
+  "homepage": "https://github.com/Dallair220/league-ladder#readme",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.1"
+  }
+}
