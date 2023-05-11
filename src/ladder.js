@@ -1,4 +1,4 @@
-import { getPlayerRanks } from './rank';
+import getPlayerRanks from './rank';
 
 const TIER_VALUE = {
   IRON: 1,
@@ -39,14 +39,17 @@ function sortRankedPlayers(rankedPlayers) {
     return 0;
   });
 
+  let i = 1;
   rankedPlayers.forEach((player) => {
     console.log(
-      player.summonerName,
+      `${i}. `,
+      `${player.summonerName} |`,
       player.tier,
       player.rank,
       `${player.lp}LP`,
       `- at ${player.winrate}% wr`
     );
+    i += 1;
   });
 }
 

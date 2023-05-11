@@ -1,10 +1,12 @@
 import { getInfoBySummonerName, getRankedInfoBySummonerId } from './fetch';
+import getSummonerIdBySummonerName from './summonerId';
 
 // logging the summoner rank
-export async function filterSoloqRankBySummonerName(summonerName) {
+async function filterSoloqRankBySummonerName(summonerName) {
   try {
-    const summoner = await getInfoBySummonerName(summonerName);
-    const response = await getRankedInfoBySummonerId(summoner.id);
+    // const summoner = await getInfoBySummonerName(summonerName);  // summoner.id needs to be used as a parameter in response
+    const summonerId = getSummonerIdBySummonerName(summonerName);
+    const response = await getRankedInfoBySummonerId(summonerId);
 
     // only get soloq, remove flex
     const soloqRankData = response.filter(
@@ -26,7 +28,7 @@ export async function filterSoloqRankBySummonerName(summonerName) {
         winrate,
       };
     }
-    return { summonerName: summoner.name };
+    return { summonerName };
   } catch (error) {
     console.error(error);
     return error;
@@ -34,7 +36,7 @@ export async function filterSoloqRankBySummonerName(summonerName) {
 }
 
 // takes in an array of summoner names and displays their ranks
-export async function getPlayerRanks(summonerArray) {
+export default async function getPlayerRanks(summonerArray) {
   const playersWithSoloqRankedData = [];
   const unrankedPlayerData = [];
 
