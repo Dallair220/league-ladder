@@ -1,4 +1,4 @@
-import { getInfoBySummonerName, getRankedInfoBySummonerId } from './fetch';
+import { getRankedInfoBySummonerId } from './fetch';
 import getSummonerIdBySummonerName from './summonerId';
 
 // logging the summoner rank
@@ -50,7 +50,7 @@ export default async function getPlayerRanks(summonerArray) {
           // console.log(`${player.summonerName}: ${player.tier} ${player.rank} (${player.lp} LP) | ${player.wins}W, ${player.losses}L = ${player.winrate}% WR `);
           playersWithSoloqRankedData.push(player);
         } else {
-          console.log(`${player.summonerName} is unranked.`);
+          console.log(`${player.summonerName} is currently Unranked.`);
           unrankedPlayerData.push(player);
         }
       } catch (error) {

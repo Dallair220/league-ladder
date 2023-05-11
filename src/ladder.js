@@ -57,10 +57,7 @@ export default async function sortAllRanks(playerArray) {
   const playerRanks = await getPlayerRanks(playerArray);
   // now we need to sort rankedPlayers
   const rankedPlayers = playerRanks.playersWithSoloqRankedData;
-  const unrankedPlayers = playerRanks.unrankedPlayerData;
-
-  // console.log(rankedPlayers);
-  // console.log(unrankedPlayers);
+  // const unrankedPlayers = playerRanks.unrankedPlayerData;
 
   if (rankedPlayers.length > 0) {
     sortRankedPlayers(rankedPlayers);

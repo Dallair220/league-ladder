@@ -1,6 +1,7 @@
 import sortAllRanks from './ladder';
 
 sortAllRanks([
+  'Silhim',
   'LVance',
   'Scintmar',
   'Schmongo',
@@ -12,4 +13,8 @@ sortAllRanks([
   'GUCCISCRIPTER',
   'Keep0ut',
   'AdmiralAlpaka',
+  'KrokoEfendi',
+  'Escapes',
+  'LumpiDumpiDu',
+  'Carthour',
 ]);
