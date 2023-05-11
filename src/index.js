@@ -1,5 +1,7 @@
 import sortAllRanks from './ladder';
 
+console.log('running!');
+
 sortAllRanks([
   'Silhim',
   'LVance',
