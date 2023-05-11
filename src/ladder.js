@@ -1,3 +1,4 @@
+import displayLadder from './output';
 import getPlayerRanks from './rank';
 
 const TIER_VALUE = {
@@ -38,19 +39,7 @@ function sortRankedPlayers(rankedPlayers) {
     // if LP is the same as well, don't change sorting order
     return 0;
   });
-
-  let i = 1;
-  rankedPlayers.forEach((player) => {
-    console.log(
-      `${i}. `,
-      `${player.summonerName} |`,
-      player.tier,
-      player.rank,
-      `${player.lp}LP`,
-      `- at ${player.winrate}% wr`
-    );
-    i += 1;
-  });
+  displayLadder(rankedPlayers);
 }
 
 export default async function sortAllRanks(playerArray) {
