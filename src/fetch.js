@@ -13,7 +13,7 @@ export async function getInfoBySummonerName(summonerName) {
     const generalSummonerData = await response.json();
     return generalSummonerData;
   } catch (error) {
-    console.log('Could not find summoner by summoner name.');
+    console.log(`Could not find ${summonerName} by summoner name.`);
     return error;
   }
 }
@@ -28,7 +28,9 @@ export async function getRankedInfoBySummonerId(summonerId) {
     const summonerRankedData = await response.json();
     return summonerRankedData;
   } catch (error) {
-    console.log('Could not find summoner ranked data by summonerId.');
+    console.log(
+      `Could not find summoner ranked data by summonerId: ${summonerId}`
+    );
     return error;
   }
 }

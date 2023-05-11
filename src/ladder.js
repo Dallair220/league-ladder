@@ -44,7 +44,8 @@ function sortRankedPlayers(rankedPlayers) {
       player.summonerName,
       player.tier,
       player.rank,
-      `${player.lp}LP`
+      `${player.lp}LP`,
+      `- at ${player.winrate}% wr`
     );
   });
 }

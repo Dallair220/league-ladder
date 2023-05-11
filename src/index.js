@@ -1,4 +1,5 @@
 import sortAllRanks from './ladder';
+import getSummonerIdBySummonerName from './summonerId';
 
 // outputAllRanks([
 //   'Lvance',
@@ -10,12 +11,4 @@ import sortAllRanks from './ladder';
 //   'Rxle',
 // ]);
 
-sortAllRanks([
-  'Admiral Alpaka',
-  'LVance',
-  'Scintmar',
-  'Schmongo',
-  'Agurin',
-  'imxVentus',
-]);
-// sortAllRanks(['schmongo']);
+console.log(getSummonerIdBySummonerName('lvance'));

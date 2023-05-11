@@ -45,9 +45,7 @@ export async function getPlayerRanks(summonerArray) {
 
         // check if summoner is unranked
         if (player.tier !== undefined) {
-          console.log(
-            `${player.summonerName}: ${player.tier} ${player.rank} (${player.lp} LP) | ${player.wins}W, ${player.losses}L = ${player.winrate}% WR `
-          );
+          // console.log(`${player.summonerName}: ${player.tier} ${player.rank} (${player.lp} LP) | ${player.wins}W, ${player.losses}L = ${player.winrate}% WR `);
           playersWithSoloqRankedData.push(player);
         } else {
           console.log(`${player.summonerName} is unranked.`);
