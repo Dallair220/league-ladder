@@ -1,3 +1,4 @@
+import displayLoadingAnimation from './loading';
 import displayLadder from './output';
 import getPlayerRanks from './rank';
 
@@ -40,9 +41,13 @@ function sortRankedPlayers(rankedPlayers) {
     return 0;
   });
   displayLadder(rankedPlayers);
+
+  displayLoadingAnimation(false);
 }
 
 export default async function sortAllRanks(playerArray) {
+  displayLoadingAnimation(true);
+
   const playerRanks = await getPlayerRanks(playerArray);
   // now we need to sort rankedPlayers
   const rankedPlayers = playerRanks.playersWithSoloqRankedData;
