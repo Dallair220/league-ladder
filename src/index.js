@@ -1,6 +1,6 @@
 import sortAllRanks from './ladder';
 
-console.log('running!');
+console.log('running.');
 
 // sortAllRanks([
 //   'Silhim',
