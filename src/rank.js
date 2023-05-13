@@ -30,8 +30,7 @@ async function filterSoloqRankBySummonerName(summonerName) {
     }
     return { summonerName };
   } catch (error) {
-    console.error(error);
-    return error;
+    return undefined;
   }
 }
 
@@ -46,7 +45,9 @@ export default async function getPlayerRanks(summonerArray) {
         const player = await filterSoloqRankBySummonerName(summoner);
 
         // check if summoner is unranked
-        if (player.tier !== undefined) {
+        if (player === undefined) {
+          console.log(`${summoner}: probably API error`);
+        } else if (player.tier !== undefined) {
           // console.log(`${player.summonerName}: ${player.tier} ${player.rank} (${player.lp} LP) | ${player.wins}W, ${player.losses}L = ${player.winrate}% WR `);
           playersWithSoloqRankedData.push(player);
         } else {
