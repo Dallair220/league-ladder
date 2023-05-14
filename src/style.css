@@ -83,7 +83,7 @@ img {
   font-weight: bold;
   font-size: 30px;
   margin-right: 10px;
-  align-self: center;
+  align-self: flex-end;
 }
 .rank {
   grid-area: rank;
