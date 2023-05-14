@@ -1,7 +1,7 @@
 import './style.css';
 import sortAllRanks from './ladder';
 
-console.log('running');
+console.log('running?');
 
 const summoners = [
   'Silhim',
