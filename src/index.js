@@ -1,7 +1,7 @@
 import './style.css';
 import sortAllRanks from './ladder';
 
-sortAllRanks([
+const summoners = [
   'Silhim',
   'LVance',
   'Scintmar',
@@ -19,4 +19,6 @@ sortAllRanks([
   'LumpiDumpiDu',
   'Carthour',
   'Sturlennare',
-]);
+];
+
+sortAllRanks(summoners);

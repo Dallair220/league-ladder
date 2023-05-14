@@ -1,7 +1,7 @@
 // this file is only there to limit the number of api calls needed to get around some rate limits.
 // "storing" summonerIds
 
-const db = {
+const summonerId = {
   silhim: '2xp2EBviq7UbXSr9FhIEYmm3M4Nl0imIsQq1jlOF7Pk-E58',
   lvance: 'D2-hxWfZoC4lguMEh2ZmaBRU5aW60zKyPpAtGMrVSm2paL4',
   scintmar: '-bq6ZUkGp3IkdMj0LI7-RACAFKwJG4CPwTmKyJEZFz3U5OI',
@@ -21,6 +21,30 @@ const db = {
   sturlennare: '0Qnr1Qmk4rSBZBtMQMKtM4EsiKEjCWZzVC_9ArNmRfSkdF8t',
 };
 
+const iconId = {
+  silhim: '3184',
+  lvance: '4982',
+  scintmar: '918',
+  schmongo: '745',
+  dimantus: '547',
+  fertig11: '5768',
+  hornycopter: '4149',
+  generalmuh: '5091',
+  m4pl3g0d: '5456',
+  gucciscripter: '10',
+  keep0ut: '915',
+  admiralalpaka: '4068',
+  krokoefendi: '5765',
+  escapes: '5626',
+  lumpidumpidu: '23',
+  carthour: '22',
+  sturlennare: '7',
+};
+
 export default function getSummonerIdBySummonerName(summonerName) {
-  return db[summonerName.toLowerCase()];
+  return summonerId[summonerName.toLowerCase()];
+}
+
+export function getIconIdBySummonerName(summonerName) {
+  return iconId[summonerName.toLowerCase()];
 }

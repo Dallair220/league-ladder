@@ -1,3 +1,5 @@
+import { getIconIdBySummonerName } from './summonerId';
+
 const cardContainer = document.querySelector('.cardcontainer');
 
 function consoleOutput(player, ranking) {
@@ -21,6 +23,16 @@ function cardCreator(classToAdd, text = '', cardToAdd = cardContainer) {
   return card;
 }
 
+function iconCreator(cardToAdd, summonerName) {
+  const card = document.createElement('img');
+  const iconId = getIconIdBySummonerName(summonerName.replaceAll(' ', ''));
+  console.log(iconId);
+  // card.src = `https://ddragon.leagueoflegends.com/cdn/11.14.1/img/profileicon/${iconId}.png`;
+  card.src = `https://ddragon-webp.lolmath.net/latest/img/profileicon/${iconId}.webp`;
+  card.classList.add('icon');
+  cardToAdd.appendChild(card);
+}
+
 export function displayLadder(rankedPlayers) {
   let ranking = 1;
   rankedPlayers.forEach((player) => {
@@ -28,7 +40,7 @@ export function displayLadder(rankedPlayers) {
     // rankingElementCreator
     cardCreator('ranking', ranking, card);
     // iconElementCreator
-    cardCreator('icon', '#icon', card);
+    iconCreator(card, player.summonerName);
     // ignElementCreator
     cardCreator('ign', player.summonerName, card);
     // rankElementCreator
@@ -47,37 +59,3 @@ export function displayUnrankedPlayers(unrankedPlayers) {
   honorableMention = `${honorableMention.slice(0, -2)}.`;
   cardCreator('unranked', honorableMention);
 }
-
-// .card {
-//   display: grid;
-//   grid-template-areas:
-//     'ranking icon ign ign'
-//     'ranking icon rank games'
-//     'ranking icon rank winrate';
-//   grid-template-columns: 1fr 2fr 2fr 1fr;
-//   grid-template-rows: 2fr 1fr 1fr;
-// }
-// .ranking {
-//   grid-area: ranking;
-//   justify-self: center;
-// }
-// .icon {
-//   grid-area: icon;
-//   justify-self: center;
-// }
-// .ign {
-//   grid-area: ign;
-//   justify-self: center;
-// }
-// .rank {
-//   grid-area: rank;
-//   justify-self: center;
-// }
-// .games {
-//   grid-area: games;
-//   justify-self: center;
-// }
-// .winrate {
-//   grid-area: winrate;
-//   justify-self: center;
-// }
