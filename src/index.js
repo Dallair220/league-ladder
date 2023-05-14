@@ -23,4 +23,4 @@ const summoners = [
   'Sturlennare',
 ];
 
-// sortAllRanks(summoners);
+sortAllRanks(summoners);
