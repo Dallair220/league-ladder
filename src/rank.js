@@ -59,6 +59,5 @@ export default async function getPlayerRanks(summonerArray) {
       }
     })
   );
-
   return { playersWithSoloqRankedData, unrankedPlayerData };
 }

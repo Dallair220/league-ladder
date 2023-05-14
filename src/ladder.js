@@ -1,5 +1,5 @@
 import displayLoadingAnimation from './loading';
-import displayLadder from './output';
+import { displayLadder, displayUnrankedPlayers } from './output';
 import getPlayerRanks from './rank';
 
 const TIER_VALUE = {
@@ -51,11 +51,13 @@ export default async function sortAllRanks(playerArray) {
   const playerRanks = await getPlayerRanks(playerArray);
   // now we need to sort rankedPlayers
   const rankedPlayers = playerRanks.playersWithSoloqRankedData;
-  // const unrankedPlayers = playerRanks.unrankedPlayerData;
+  const unrankedPlayers = playerRanks.unrankedPlayerData;
 
   if (rankedPlayers.length > 0) {
     sortRankedPlayers(rankedPlayers);
   } else {
     console.log('No ranked players found.');
   }
+
+  displayUnrankedPlayers(unrankedPlayers);
 }
