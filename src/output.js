@@ -58,6 +58,10 @@ export function displayLadder(rankedPlayers) {
     consoleOutput(player, ranking);
     ranking += 1;
   });
+  // linear-gradient(var(#0e2d44), var(rgb(57, 1, 57)))
+  // console.log(document.querySelector('body')).style.background = '#red';
+  document.body.style.backgroundColor =
+    'linear-gradient(#0e2d44, rgb(57, 1, 57)';
 }
 
 export function displayUnrankedPlayers(unrankedPlayers) {
@@ -66,5 +70,7 @@ export function displayUnrankedPlayers(unrankedPlayers) {
     honorableMention += `${player.summonerName}, `;
   });
   honorableMention = `${honorableMention.slice(0, -2)}.`;
-  cardCreator('unranked', honorableMention);
+  const unrankedCard = document.querySelector('.unranked');
+  // unrankedCard.innerHTML = honorableMention
+  cardCreator('unranked', honorableMention, unrankedCard);
 }

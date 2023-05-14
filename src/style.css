@@ -13,7 +13,7 @@
   font-size: 20px;
 }
 
-html {
+body {
   background: linear-gradient(var(--dark-blue), var(--purple));
 }
 
@@ -23,6 +23,8 @@ a:hover {
 
 img {
   width: 75px;
+  border-radius: 100px;
+  margin: 5px;
 }
 
 .container {
@@ -79,11 +81,13 @@ img {
 .ign {
   grid-area: ign;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
   margin-right: 10px;
+  align-self: center;
 }
 .rank {
   grid-area: rank;
+  align-self: flex-start;
 }
 
 .unranked {

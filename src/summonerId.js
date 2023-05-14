@@ -19,6 +19,8 @@ const summonerId = {
   lumpidumpidu: 'QDv134EFUf7JW6ZftFmBHn0fMp8XW6acO4aMr3Y3j2FEJYU',
   carthour: 'G3K0j0kAAgedp692MMBjm_0C4jjTrZeNP5v4OtT7I20wKDs',
   sturlennare: '0Qnr1Qmk4rSBZBtMQMKtM4EsiKEjCWZzVC_9ArNmRfSkdF8t',
+  zul: 'q7VXJemUzb_ockkIyFKei7ROUNBtuStnAJmDSN-g8U34aJ3X',
+  imxventus: 'yeKqF2QF3k0EXwJFjdCot937iV3fiGc2fItVAuT52TaM-ss',
 };
 
 const iconId = {
@@ -39,6 +41,8 @@ const iconId = {
   lumpidumpidu: '23',
   carthour: '22',
   sturlennare: '7',
+  zul: '5256',
+  imxventus: '5688',
 };
 
 export default function getSummonerIdBySummonerName(summonerName) {
