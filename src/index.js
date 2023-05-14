@@ -18,4 +18,5 @@ sortAllRanks([
   'Escapes',
   'LumpiDumpiDu',
   'Carthour',
+  'Sturlennare',
 ]);

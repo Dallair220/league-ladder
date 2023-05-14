@@ -12,65 +12,70 @@
   background: linear-gradient(var(--dark-blue), var(--purple));
   font-family: 'Nunito', sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 200px 1fr 100px;
+  grid-template-rows: 150px 1fr 100px;
   grid-template-areas:
     'header'
     'content'
     'footer';
   height: 100vh;
+  justify-items: center;
 }
 .header {
   grid-area: header;
-  justify-self: center;
+  align-self: center;
+  font-size: 30px;
 }
 .content {
   text-align: center;
   grid-area: content;
   height: 100%;
-  justify-self: center;
 }
 .footer {
   grid-area: footer;
-  justify-self: center;
+  font-size: 25px;
 }
 
 .card {
   display: grid;
   grid-template-areas:
-    'ranking icon ign ign'
-    'ranking icon rank games'
-    'ranking icon rank winrate';
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
+    'ranking icon ign '
+    'ranking icon rank ';
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 3fr 2fr;
+
+  background: linear-gradient(var(--dark-blue), var(--blue)) padding-box,
+    linear-gradient(45deg, var(--dark-yellow), var(--light-yellow)) border-box;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  margin: 10px;
+  align-items: center;
+  justify-items: center;
 }
 .ranking {
   grid-area: ranking;
-  justify-self: center;
+  font-size: 50px;
 }
 .icon {
   grid-area: icon;
-  justify-self: center;
 }
 .ign {
   grid-area: ign;
-  justify-self: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 10px;
 }
 .rank {
   grid-area: rank;
-  justify-self: center;
 }
-.games {
-  grid-area: games;
-  justify-self: center;
-}
-.winrate {
-  grid-area: winrate;
-  justify-self: center;
+
+.unranked {
+  margin: 30px;
 }
 
 h1 {

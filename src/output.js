@@ -12,13 +12,11 @@ function consoleOutput(player, ranking) {
   );
 }
 
-// function
-
-function cardCreator(player) {
+function cardCreator(classToAdd, text = '', cardToAdd = cardContainer) {
   const card = document.createElement('div');
-  card.innerHTML = player.summonerName;
-  console.log(cardContainer);
-  cardContainer.appendChild(card);
+  card.innerHTML = text;
+  card.classList.add(classToAdd);
+  cardToAdd.appendChild(card);
 
   return card;
 }
@@ -26,7 +24,15 @@ function cardCreator(player) {
 export function displayLadder(rankedPlayers) {
   let ranking = 1;
   rankedPlayers.forEach((player) => {
-    const card = cardCreator(player);
+    const card = cardCreator('card');
+    // rankingElementCreator
+    cardCreator('ranking', ranking, card);
+    // iconElementCreator
+    cardCreator('icon', '#icon', card);
+    // ignElementCreator
+    cardCreator('ign', player.summonerName, card);
+    // rankElementCreator
+    cardCreator('rank', `${player.tier} ${player.rank} ${player.lp}LP`, card);
 
     consoleOutput(player, ranking);
     ranking += 1;
@@ -34,9 +40,12 @@ export function displayLadder(rankedPlayers) {
 }
 
 export function displayUnrankedPlayers(unrankedPlayers) {
+  let honorableMention = 'Unranked: ';
   unrankedPlayers.forEach((player) => {
-    cardCreator(player);
+    honorableMention += `${player.summonerName}, `;
   });
+  honorableMention = `${honorableMention.slice(0, -2)}.`;
+  cardCreator('unranked', honorableMention);
 }
 
 // .card {
