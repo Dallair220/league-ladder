@@ -8,10 +8,17 @@
   --light-yellow: #fffbd9;
   --purple: rgb(57, 1, 57);
 
-  background: linear-gradient(var(--dark-blue), var(--purple));
   font-family: 'Nunito', sans-serif;
   color: white;
   font-size: 20px;
+}
+
+html {
+  background: linear-gradient(var(--dark-blue), var(--purple));
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {

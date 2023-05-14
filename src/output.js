@@ -33,6 +33,15 @@ function iconCreator(cardToAdd, summonerName) {
   cardToAdd.appendChild(card);
 }
 
+function opggCreator(cardToAdd, text) {
+  const card = document.createElement('a');
+  card.setAttribute('href', `https://www.op.gg/summoners/euw/${text}`);
+
+  card.innerHTML = text;
+  card.classList.add('ign');
+  cardToAdd.appendChild(card);
+}
+
 export function displayLadder(rankedPlayers) {
   let ranking = 1;
   rankedPlayers.forEach((player) => {
@@ -42,7 +51,7 @@ export function displayLadder(rankedPlayers) {
     // iconElementCreator
     iconCreator(card, player.summonerName);
     // ignElementCreator
-    cardCreator('ign', player.summonerName, card);
+    opggCreator(card, player.summonerName);
     // rankElementCreator
     cardCreator('rank', `${player.tier} ${player.rank} ${player.lp}LP`, card);
 

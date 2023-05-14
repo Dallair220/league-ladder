@@ -13,7 +13,7 @@ const summoners = [
   'Hornycopter',
   'GeneralMuh',
   'M4pl3g0d',
-  'GUCCISCRIPTER',
+  'Primeburst74',
   'Keep0ut',
   'AdmiralAlpaka',
   'KrokoEfendi',
