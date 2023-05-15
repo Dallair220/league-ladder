@@ -28,6 +28,10 @@ img {
   margin: 5px;
 }
 
+.header > img {
+  width: 96px;
+}
+
 .container {
   display: grid;
   grid-template-rows: 125px 1fr 50px;
@@ -95,7 +99,8 @@ img {
 }
 
 .unranked {
-  margin: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 h1 {
