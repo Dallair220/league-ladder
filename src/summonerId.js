@@ -21,10 +21,11 @@ const summonerId = {
   sturlennare: '0Qnr1Qmk4rSBZBtMQMKtM4EsiKEjCWZzVC_9ArNmRfSkdF8t',
   zul: 'q7VXJemUzb_ockkIyFKei7ROUNBtuStnAJmDSN-g8U34aJ3X',
   imxventus: 'yeKqF2QF3k0EXwJFjdCot937iV3fiGc2fItVAuT52TaM-ss',
+  treak: 'ZIxDRhXhk-S2oxVpuvQ0MBkE7MJ3zoKtQEaNPxNEYNLLU8g',
 };
 
 const iconId = {
-  silhim: '3184',
+  silhim: 3184,
   lvance: '4982',
   scintmar: '918',
   schmongo: '745',
@@ -43,6 +44,7 @@ const iconId = {
   sturlennare: '7',
   zul: '5256',
   imxventus: '5688',
+  treak: '4568',
 };
 
 export default function getSummonerIdBySummonerName(summonerName) {
