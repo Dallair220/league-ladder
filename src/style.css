@@ -23,7 +23,7 @@ a:hover {
 }
 
 img {
-  width: 75px;
+  width: 65px;
   border-radius: 100px;
   margin: 5px;
 }
@@ -81,7 +81,7 @@ img {
 }
 .ranking {
   grid-area: ranking;
-  font-size: 50px;
+  font-size: 40px;
 }
 .icon {
   grid-area: icon;
