@@ -1,3 +1,3 @@
 export default function getRiotAPIKey() {
-  return 'RGAPI-b642fd95-fb77-4c98-a251-f81cbefcc74e';
+  return 'RGAPI-d6fb6f64-5574-448a-a5ac-88771904af5a';
 }

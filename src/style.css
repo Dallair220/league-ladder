@@ -83,6 +83,7 @@ a:hover {
 .ranking {
   grid-area: ranking;
   font-size: 40px;
+  color: var(--light-yellow);
 }
 .icon {
   grid-area: icon;
