@@ -13,8 +13,9 @@
   font-size: 20px;
 }
 
+html,
 body {
-  background: linear-gradient(var(--dark-blue), var(--purple));
+  margin: 0;
 }
 
 a:hover {
@@ -34,8 +35,10 @@ img {
     'header'
     'content'
     'footer';
-  height: 100vh;
   justify-items: center;
+  overflow: auto;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--dark-blue), var(--purple));
 }
 .header {
   grid-area: header;
