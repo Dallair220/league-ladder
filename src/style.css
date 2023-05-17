@@ -68,7 +68,7 @@ a:hover {
   grid-template-areas:
     'ranking ign icon'
     'ranking rank icon';
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 3fr 2fr;
 
   background: linear-gradient(var(--dark-blue), var(--blue)) padding-box,
