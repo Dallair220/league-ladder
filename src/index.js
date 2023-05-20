@@ -21,7 +21,7 @@ const summoners = [
   'Sturlennare',
   'Zul',
   'imxVentus',
-  'Treak',
+  'Ť7Shad0wWalker',
 ];
 
 sortAllRanks(summoners);
