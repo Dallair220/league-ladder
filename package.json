@@ -4,7 +4,8 @@
   "description": "Riot API testing + fun project for friends group (RCD discord)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "key": "npx webpack && git commit -am 'key' && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
